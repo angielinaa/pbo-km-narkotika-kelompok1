@@ -73,6 +73,27 @@ public class StatistikPutusan {
         }
     }
 
+    /**
+     * Menghitung distribusi jenis narkotika.
+     */
+    public HashMap<String, Integer> getDistribusiJenis(
+            ArrayList<Putusan> data) {
+
+        HashMap<String, Integer> distribusi = new HashMap<>();
+
+        for (Putusan p : data) {
+
+            String jenis = p.getJenisNarkotika();
+
+            distribusi.put(
+                    jenis,
+                    distribusi.getOrDefault(jenis, 0) + 1
+            );
+        }
+
+        return distribusi;
+    }
+
     public int getTotalPutusan() {
         return totalPutusan;
     }
