@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8f61fca-b2df-430e-9213-c4e47c6053c7" name="Changes" comment="" />
+    <list default="true" id="c8f61fca-b2df-430e-9213-c4e47c6053c7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/model/KnowledgeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/Putusan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/StatistikPutusan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,9 +25,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="3EsWMRvebjhp2KQ7oqxhlcNWQWf" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -35,7 +40,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "feature/controller",
+    "git-widget-placeholder": "feature/model",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/PBO-tugasbesar/tugas-besar-pbo-project"
   }
