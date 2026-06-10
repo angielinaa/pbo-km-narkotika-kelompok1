@@ -1,57 +1,94 @@
 package controller;
 
-import app.DatasetManager;
-import app.MainView;
-import app.PutusanNarkotika;
-import javafx.collections.FXCollections;
-import javafx.scene.control.Alert;
-import java.util.List;
+import java.util.Scanner;
+import java.util.ArrayList;
+import model.KnowledgeRepository;
+import model.Putusan;
+import model.StatistikPutusan;
+import model.DataDummy;
+import view.ConsoleView;
 
 public class KnowledgeController {
-    private DatasetManager model;
-    private MainView view;
+    private KnowledgeRepository repository;
+    private ConsoleView view;
+    private Scanner scanner;
 
-    public KnowledgeController(DatasetManager model, MainView view) {
-        this.model = model;
+    public KnowledgeController(KnowledgeRepository repository, ConsoleView view) {
+        this.repository = repository;
         this.view = view;
-        hubungkanKomponen();
+        this.scanner = new Scanner(System.in);
     }
 
-    private void hubungkanKomponen() {
-        muatUlangTabel(model.getAllPutusan());
+    public void start() {
+        if (repository.getSemuaData().isEmpty()) {
+            DataDummy.loadData(repository);
+        }
 
-        view.getRoleChoiceBox().setItems(FXCollections.observableArrayList(model.getKategoriPeran()));
-
-        view.getBtnCari().setOnAction(e -> handlePencarian());
-
-        view.getBtnRefresh().setOnAction(e -> {
-            view.getTxtCari().clear();
-            muatUlangTabel(model.getAllPutusan());
-        });
-
-        view.getBtnTambah().setOnAction(e -> handleInputBaru());
-    }
-
-    private void muatUlangTabel(List<PutusanNarkotika> data) {
-        view.getTableView().setItems(FXCollections.observableArrayList(data));
-        view.getLblTotalData().setText("Total Putusan Terindeks: " + data.size() + " Dokumen");
-    }
-
-    private void handlePencarian() {
-        String kataKunci = view.getTxtCari().getText();
-        if (kataKunci == null || kataKunci.trim().isEmpty()) {
-            muatUlangTabel(model.getAllPutusan());
-        } else {
-            List<PutusanNarkotika> hasil = model.cariBerdasarkanKeyword(kataKunci);
-            muatUlangTabel(hasil);
+        boolean berjalan = true;
+        while (berjalan) {
+            int pilihan = view.tampilkanMenu(scanner);
+            switch (pilihan) {
+                case 1:
+                    prosesTambahPutusan();
+                    break;
+                case 2:
+                    tampilkanSemuaPutusan();
+                    break;
+                case 3:
+                    prosesCariPutusan();
+                    break;
+                case 4:
+                    prosesHapusPutusan();
+                    break;
+                case 5:
+                    tampilkanStatistik();
+                    break;
+                case 0:
+                    view.tampilkanPesan("Keluar dari aplikasi. Terima kasih.");
+                    berjalan = false;
+                    break;
+                default:
+                    view.tampilkanPesan("Pilihan menu tidak valid!");
+            }
         }
     }
 
-    private void handleInputBaru() {
-        InputHandler.prosesInput(model, view, this);
+    private void prosesTambahPutusan() {
+        try {
+            Putusan putusanBaru = view.inputFormPutusan(scanner);
+            repository.simpan(putusanBaru);
+            view.tampilkanPesan("Data putusan baru berhasil disimpan ke repositori.");
+        } catch (Exception e) {
+            view.tampilkanPesan("Gagal menambah data: " + e.getMessage());
+        }
     }
 
-    public void refreshDashboard() {
-        muatUlangTabel(model.getAllPutusan());
+    private void tampilkanSemuaPutusan() {
+        ArrayList<Putusan> listData = repository.getSemuaData();
+        view.tampilkanDaftarPutusan(listData);
+    }
+
+    private void prosesCariPutusan() {
+        System.out.print("Masukkan Kata Kunci (Nama Terdakwa): ");
+        String keyword = scanner.nextLine();
+        ArrayList<Putusan> hasil = repository.cariByNama(keyword);
+        view.tampilkanDaftarPutusan(hasil);
+    }
+
+    private void prosesHapusPutusan() {
+        System.out.print("Masukkan Nomor Perkara yang akan dihapus: ");
+        String nomor = scanner.nextLine();
+        boolean terhapus = repository.hapus(nomor);
+        if (terhapus) {
+            view.tampilkanPesan("Data putusan dengan nomor " + nomor + " berhasil dihapus.");
+        } else {
+            view.tampilkanPesan("Data putusan tidak ditemukan.");
+        }
+    }
+
+    private void tampilkanStatistik() {
+        ArrayList<Putusan> listData = repository.getSemuaData();
+        StatistikPutusan statistik = new StatistikPutusan(listData);
+        view.tampilkanStatistik(statistik);
     }
 }
