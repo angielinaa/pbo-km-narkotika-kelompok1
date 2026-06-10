@@ -2,12 +2,11 @@ package model;
 
 /**
  * Menyediakan data sampel untuk demo aplikasi.
- *
- * @author Kelompok 1
  */
 public class DataDummy {
 
-    public static void loadData(KnowledgeRepository repository) {
+    public static void loadData(
+            KnowledgeRepository repository) {
 
         String[] jenis = {
                 "Sabu",
@@ -37,11 +36,11 @@ public class DataDummy {
             Putusan putusan = new Putusan(
                     "PN-" + i + "/2025",
                     "Pengadilan Negeri Jakarta",
-                    "2025-01-" + ((i % 28) + 1),
+                    "2025-05-" + ((i % 28) + 1),
                     "Terdakwa " + i,
-                    20 + (i % 25),
+                    20 + (i % 20),
                     jenis[i % jenis.length],
-                    1.5 + (i * 0.25),
+                    0.5 + (i * 0.2),
                     "Pasal 112 UU Narkotika",
                     peran[i % peran.length],
                     1 + (i % 10),

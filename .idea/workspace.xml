@@ -6,6 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="c8f61fca-b2df-430e-9213-c4e47c6053c7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tugas-besar-pbo-project/model/DataDummy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tugas-besar-pbo-project/model/DataDummy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tugas-besar-pbo-project/model/StatistikPutusan.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tugas-besar-pbo-project/model/StatistikPutusan.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/DataDummy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/DataDummy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/KnowledgeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/KnowledgeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Putusan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Putusan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/StatistikPutusan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/StatistikPutusan.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,18 +36,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "feature/model",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/PBO-tugasbesar/tugas-besar-pbo-project"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/model&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/PBO-tugasbesar/tugas-besar-pbo-project&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>

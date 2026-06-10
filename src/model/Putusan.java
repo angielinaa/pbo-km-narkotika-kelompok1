@@ -3,7 +3,7 @@ package model;
 /**
  * Class untuk menyimpan data putusan perkara narkotika.
  *
- * @author Kelompok 1
+ * @author Sekar
  */
 public class Putusan {
 
@@ -22,10 +22,16 @@ public class Putusan {
 
     private static int jumlahDibuat = 0;
 
+    /**
+     * Constructor kosong.
+     */
     public Putusan() {
         jumlahDibuat++;
     }
 
+    /**
+     * Constructor lengkap.
+     */
     public Putusan(String nomorPerkara, String pengadilan,
                    String tanggalPutusan, String namaTerdakwa,
                    int umurTerdakwa, String jenisNarkotika,

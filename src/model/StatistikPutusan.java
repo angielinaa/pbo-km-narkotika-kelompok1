@@ -57,8 +57,10 @@ public class StatistikPutusan {
 
             String jenis = p.getJenisNarkotika();
 
-            map.put(jenis,
-                    map.getOrDefault(jenis, 0) + 1);
+            map.put(
+                    jenis,
+                    map.getOrDefault(jenis, 0) + 1
+            );
         }
 
         int max = 0;
@@ -73,13 +75,11 @@ public class StatistikPutusan {
         }
     }
 
-    /**
-     * Menghitung distribusi jenis narkotika.
-     */
     public HashMap<String, Integer> getDistribusiJenis(
             ArrayList<Putusan> data) {
 
-        HashMap<String, Integer> distribusi = new HashMap<>();
+        HashMap<String, Integer> distribusi =
+                new HashMap<>();
 
         for (Putusan p : data) {
 

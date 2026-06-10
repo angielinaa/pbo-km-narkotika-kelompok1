@@ -3,7 +3,7 @@ package model;
 import java.util.ArrayList;
 
 /**
- * Repository penyimpanan data putusan.
+ * Repository untuk menyimpan data putusan.
  */
 public class KnowledgeRepository {
 
@@ -22,20 +22,29 @@ public class KnowledgeRepository {
     }
 
     public Putusan cariByNomor(String nomor) {
+
         for (Putusan p : daftarPutusan) {
-            if (p.getNomorPerkara().equalsIgnoreCase(nomor)) {
+
+            if (p.getNomorPerkara()
+                    .equalsIgnoreCase(nomor)) {
+
                 return p;
             }
         }
+
         return null;
     }
 
     public ArrayList<Putusan> cariByNama(String nama) {
+
         ArrayList<Putusan> hasil = new ArrayList<>();
 
         for (Putusan p : daftarPutusan) {
-            if (p.getNamaTerdakwa().toLowerCase()
+
+            if (p.getNamaTerdakwa()
+                    .toLowerCase()
                     .contains(nama.toLowerCase())) {
+
                 hasil.add(p);
             }
         }
@@ -48,8 +57,10 @@ public class KnowledgeRepository {
         ArrayList<Putusan> hasil = new ArrayList<>();
 
         for (Putusan p : daftarPutusan) {
+
             if (p.getJenisNarkotika()
                     .equalsIgnoreCase(jenis)) {
+
                 hasil.add(p);
             }
         }
@@ -57,11 +68,28 @@ public class KnowledgeRepository {
         return hasil;
     }
 
+    public boolean update(String nomor, Putusan dataBaru) {
+
+        for (int i = 0; i < daftarPutusan.size(); i++) {
+
+            if (daftarPutusan.get(i)
+                    .getNomorPerkara()
+                    .equalsIgnoreCase(nomor)) {
+
+                daftarPutusan.set(i, dataBaru);
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     public boolean hapus(String nomor) {
 
         Putusan p = cariByNomor(nomor);
 
         if (p != null) {
+
             daftarPutusan.remove(p);
             return true;
         }
