@@ -4,18 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8f61fca-b2df-430e-9213-c4e47c6053c7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/out/production/tugas-besar-pbo-project/model/DataDummy.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/tugas-besar-pbo-project/model/KnowledgeRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/tugas-besar-pbo-project/model/Putusan.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/tugas-besar-pbo-project/model/StatistikPutusan.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/DataDummy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/KnowledgeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Putusan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/StatistikPutusan.java" afterDir="false" />
+    <list default="true" id="31751fcf-a2d3-4497-9307-2981e5074f9b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tugas-besar-pbo-project/app/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tugas-besar-pbo-project/app/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,46 +22,85 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="McpProjectServerCommands">
-    <commands />
-    <urls />
-  </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 2
+  &quot;associatedIndex&quot;: 8,
+  &quot;fromUser&quot;: false
 }</component>
-  <component name="ProjectId" id="3EsWMRvebjhp2KQ7oqxhlcNWQWf" />
+  <component name="ProjectId" id="3EschEg1XEi6IYhPgDJcsO3yLHo" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Merging develop&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/PBO-tugasbesar/tugas-besar-pbo-project&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "feature/controller",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/WINDOWS/IdeaProjects/tugas-besar-pbo-project",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/WINDOWS/tugas-besar-pbo-project/untitled/src/Main.java",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.31033.145" />
+        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.25134.95" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.25134.95" />
       </set>
     </attachedChunks>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c8f61fca-b2df-430e-9213-c4e47c6053c7" name="Changes" comment="" />
-      <created>1780967709606</created>
+      <changelist id="31751fcf-a2d3-4497-9307-2981e5074f9b" name="Changes" comment="" />
+      <created>1780970834612</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1780967709606</updated>
+      <updated>1780970834612</updated>
+      <workItem from="1780970835776" duration="371000" />
+      <workItem from="1780971223858" duration="342000" />
+      <workItem from="1780971585529" duration="91000" />
+      <workItem from="1780971680265" duration="562000" />
+      <workItem from="1780972248749" duration="421000" />
+      <workItem from="1780972676339" duration="86000" />
+      <workItem from="1780972795470" duration="302000" />
+      <workItem from="1780973101204" duration="2375000" />
+      <workItem from="1780975986893" duration="151000" />
+      <workItem from="1780976273536" duration="3000" />
+      <workItem from="1780976301189" duration="932000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$USER_HOME$/tugas-besar-pbo-project/untitled/src/Main.java</url>
+          <line>10</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

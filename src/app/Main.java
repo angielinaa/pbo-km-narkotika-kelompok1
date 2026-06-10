@@ -1,26 +1,15 @@
 package app;
 
-import model.*;
+import model.KnowledgeRepository;
+import view.ConsoleView;
+import controller.KnowledgeController;
 
 public class Main {
 
     public static void main(String[] args) {
-
-        KnowledgeRepository repository =
-                new KnowledgeRepository();
-
-        DataDummy.loadData(repository);
-
-        System.out.println(
-                "Jumlah data = " +
-                        repository.getTotalData()
-        );
-
-        StatistikPutusan statistik =
-                new StatistikPutusan(
-                        repository.getSemuaData()
-                );
-
-        System.out.println(statistik);
+        KnowledgeRepository repository = new KnowledgeRepository();
+        ConsoleView view = new ConsoleView();
+        KnowledgeController controller = new KnowledgeController(repository, view);
+        controller.start();
     }
 }
