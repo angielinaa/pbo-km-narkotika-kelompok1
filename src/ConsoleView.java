@@ -3,6 +3,8 @@ package view;
 import java.util.Scanner;
 import java.util.ArrayList;
 
+import model.Putusan;
+import model.StatistikPutusan;
 import util.InputHandler;
 
 public class ConsoleView {
