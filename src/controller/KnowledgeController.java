@@ -1,57 +1,88 @@
 package controller;
 
-import app.DatasetManager;
-import app.MainView;
-import app.PutusanNarkotika;
-import javafx.collections.FXCollections;
-import javafx.scene.control.Alert;
-import java.util.List;
+import model.KnowledgeRepository;
+import model.Putusan;
+import model.StatistikPutusan;
+import model.DataDummy;
+import view.GUIView;
+import java.util.ArrayList;
 
 public class KnowledgeController {
-    private DatasetManager model;
-    private MainView view;
+    private KnowledgeRepository repository;
+    private GUIView view;
 
-    public KnowledgeController(DatasetManager model, MainView view) {
-        this.model = model;
+    public KnowledgeController(KnowledgeRepository repository, GUIView view) {
+        this.repository = repository;
         this.view = view;
-        hubungkanKomponen();
+        initController();
     }
 
-    private void hubungkanKomponen() {
-        muatUlangTabel(model.getAllPutusan());
+    private void initController() {
+        // Load data dummy jika kosong
+        if (repository.getSemuaData().isEmpty()) {
+            DataDummy.loadData(repository);
+        }
 
-        view.getRoleChoiceBox().setItems(FXCollections.observableArrayList(model.getKategoriPeran()));
+        // Menghubungkan klik tombol dengan fungsi (Event Listeners)
+        view.getBtnTambah().addActionListener(e -> prosesTambahPutusan());
+        view.getBtnCari().addActionListener(e -> prosesCariPutusan());
+        view.getBtnHapus().addActionListener(e -> prosesHapusPutusan());
+        view.getBtnStatistik().addActionListener(e -> tampilkanStatistik());
 
-        view.getBtnCari().setOnAction(e -> handlePencarian());
-
-        view.getBtnRefresh().setOnAction(e -> {
-            view.getTxtCari().clear();
-            muatUlangTabel(model.getAllPutusan());
-        });
-
-        view.getBtnTambah().setOnAction(e -> handleInputBaru());
+        // Tampilkan semua data saat pertama kali aplikasi dibuka
+        tampilkanSemuaPutusan();
     }
 
-    private void muatUlangTabel(List<PutusanNarkotika> data) {
-        view.getTableView().setItems(FXCollections.observableArrayList(data));
-        view.getLblTotalData().setText("Total Putusan Terindeks: " + data.size() + " Dokumen");
+    public void start() {
+        // Menampilkan jendela GUI ke layar
+        view.setVisible(true);
     }
 
-    private void handlePencarian() {
-        String kataKunci = view.getTxtCari().getText();
-        if (kataKunci == null || kataKunci.trim().isEmpty()) {
-            muatUlangTabel(model.getAllPutusan());
-        } else {
-            List<PutusanNarkotika> hasil = model.cariBerdasarkanKeyword(kataKunci);
-            muatUlangTabel(hasil);
+    private void prosesTambahPutusan() {
+        Putusan putusanBaru = view.showInputForm();
+        if (putusanBaru != null) {
+            repository.simpan(putusanBaru);
+            view.tampilkanPesan("Data putusan baru berhasil disimpan!");
+            tampilkanSemuaPutusan(); // Refresh tabel
         }
     }
 
-    private void handleInputBaru() {
-        InputHandler.prosesInput(model, view, this);
+    private void tampilkanSemuaPutusan() {
+        view.tampilkanDaftarPutusan(repository.getSemuaData());
     }
 
-    public void refreshDashboard() {
-        muatUlangTabel(model.getAllPutusan());
+    private void prosesCariPutusan() {
+        String keyword = view.inputString("Masukkan Nama Terdakwa:");
+        if (keyword != null && !keyword.trim().isEmpty()) {
+            ArrayList<Putusan> hasil = repository.cariByNama(keyword);
+            view.tampilkanDaftarPutusan(hasil);
+            if (hasil.isEmpty()) {
+                view.tampilkanPesan("Data tidak ditemukan.");
+            }
+        } else {
+            tampilkanSemuaPutusan(); // Reset tabel jika pencarian dibatalkan/kosong
+        }
+    }
+
+    private void prosesHapusPutusan() {
+        String nomor = view.inputString("Masukkan Nomor Perkara yang akan dihapus:");
+        if (nomor != null && !nomor.trim().isEmpty()) {
+            boolean terhapus = repository.hapus(nomor);
+            if (terhapus) {
+                view.tampilkanPesan("Data berhasil dihapus.");
+                tampilkanSemuaPutusan(); // Refresh tabel
+            } else {
+                view.tampilkanPesan("Data tidak ditemukan.");
+            }
+        }
+    }
+
+    private void tampilkanStatistik() {
+        StatistikPutusan stat = new StatistikPutusan(repository.getSemuaData());
+        String info = "STATISTIK RINGKAS\n\n"
+                + "Total Data: " + stat.getTotalPutusan() + "\n"
+                + "Rata-rata Vonis: " + String.format("%.1f", stat.getRataRataVonis()) + " bulan\n"
+                + "Rata-rata Denda: Rp " + String.format("%,.2f", stat.getRataRataDenda());
+        view.tampilkanPesan(info);
     }
 }

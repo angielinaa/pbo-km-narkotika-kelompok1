@@ -5,13 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="31751fcf-a2d3-4497-9307-2981e5074f9b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/controller/InputHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tugas-besar-pbo-project.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.ai/mcp/mcp.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/pbo-km-narkotika-kelompok1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/DataDummy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/KnowledgeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/Putusan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/StatistikPutusan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/ConsoleView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/GUIView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tugas-besar-pbo-project/app/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tugas-besar-pbo-project/controller/KnowledgeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tugas-besar-pbo-project/util/InputHandler.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/InputHandler.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/KnowledgeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/KnowledgeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/InputHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/InputHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tugas-besar-pbo-project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tugas-besar-pbo-project.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +55,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
@@ -49,7 +63,7 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "develop",
+    "git-widget-placeholder": "Merging develop",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/WINDOWS/IdeaProjects/tugas-besar-pbo-project",
@@ -65,19 +79,6 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="tugas-besar-pbo-project" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="tugas-besar-pbo-project" />
-      <option name="filePath" />
-      <method v="2" />
-    </configuration>
-  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>

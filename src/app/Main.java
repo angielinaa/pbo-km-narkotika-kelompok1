@@ -1,26 +1,37 @@
 package app;
 
+import model.KnowledgeRepository;
+import view.GUIView;
 import controller.KnowledgeController;
-import javafx.application.Application;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
+import javax.swing.SwingUtilities;
+import javax.swing.UIManager;
+// IMPORT INI WAJIB SETELAH LIBRARY DIMASUKKAN
+import com.formdev.flatlaf.FlatLightLaf;
 
-public class Main extends Application {
+import java.awt.Font;
 
-    @Override
-    public void start(Stage primaryStage) {
-        DatasetManager model = new DatasetManager();
-        MainView view = new MainView();
-        new KnowledgeController(model, view);
-
-        Scene scene = new Scene(view, 1100, 700);
-
-        primaryStage.setTitle("Knowledge Management System (KMS) Putusan Pengadilan Narkotika v1.0");
-        primaryStage.setScene(scene);
-        primaryStage.show();
-    }
-
+public class Main {
     public static void main(String[] args) {
-        launch(args);
+        // 1. Setup Look and Feel FlatLaf yang Modern
+        try {
+            // Kita pakai tema Light yang clean.
+            // Kalau mau gelap, ganti jadi FlatDarkLaf()
+            UIManager.setLookAndFeel(new FlatLightLaf());
+
+            // Pengaturan Font Global agar lebih halus (Anti-aliasing default)
+            UIManager.put("defaultFont", new Font("Segoe UI", Font.PLAIN, 14));
+
+        } catch (Exception e) {
+            System.err.println("Gagal mengaktifkan FlatLaf. Tampilan akan kembali ke jadul.");
+            e.printStackTrace();
+        }
+
+        // 2. Jalankan GUI
+        SwingUtilities.invokeLater(() -> {
+            KnowledgeRepository repository = new KnowledgeRepository();
+            GUIView view = new GUIView();
+            KnowledgeController controller = new KnowledgeController(repository, view);
+            controller.start();
+        });
     }
 }
