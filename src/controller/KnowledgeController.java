@@ -1,94 +1,88 @@
 package controller;
 
-import java.util.Scanner;
-import java.util.ArrayList;
 import model.KnowledgeRepository;
 import model.Putusan;
 import model.StatistikPutusan;
 import model.DataDummy;
-import view.ConsoleView;
+import view.GUIView;
+import java.util.ArrayList;
 
 public class KnowledgeController {
     private KnowledgeRepository repository;
-    private ConsoleView view;
-    private Scanner scanner;
+    private GUIView view;
 
-    public KnowledgeController(KnowledgeRepository repository, ConsoleView view) {
+    public KnowledgeController(KnowledgeRepository repository, GUIView view) {
         this.repository = repository;
         this.view = view;
-        this.scanner = new Scanner(System.in);
+        initController();
     }
 
-    public void start() {
+    private void initController() {
+        // Load data dummy jika kosong
         if (repository.getSemuaData().isEmpty()) {
             DataDummy.loadData(repository);
         }
 
-        boolean berjalan = true;
-        while (berjalan) {
-            int pilihan = view.tampilkanMenu(scanner);
-            switch (pilihan) {
-                case 1:
-                    prosesTambahPutusan();
-                    break;
-                case 2:
-                    tampilkanSemuaPutusan();
-                    break;
-                case 3:
-                    prosesCariPutusan();
-                    break;
-                case 4:
-                    prosesHapusPutusan();
-                    break;
-                case 5:
-                    tampilkanStatistik();
-                    break;
-                case 0:
-                    view.tampilkanPesan("Keluar dari aplikasi. Terima kasih.");
-                    berjalan = false;
-                    break;
-                default:
-                    view.tampilkanPesan("Pilihan menu tidak valid!");
-            }
-        }
+        // Menghubungkan klik tombol dengan fungsi (Event Listeners)
+        view.getBtnTambah().addActionListener(e -> prosesTambahPutusan());
+        view.getBtnCari().addActionListener(e -> prosesCariPutusan());
+        view.getBtnHapus().addActionListener(e -> prosesHapusPutusan());
+        view.getBtnStatistik().addActionListener(e -> tampilkanStatistik());
+
+        // Tampilkan semua data saat pertama kali aplikasi dibuka
+        tampilkanSemuaPutusan();
+    }
+
+    public void start() {
+        // Menampilkan jendela GUI ke layar
+        view.setVisible(true);
     }
 
     private void prosesTambahPutusan() {
-        try {
-            Putusan putusanBaru = view.inputFormPutusan(scanner);
+        Putusan putusanBaru = view.showInputForm();
+        if (putusanBaru != null) {
             repository.simpan(putusanBaru);
-            view.tampilkanPesan("Data putusan baru berhasil disimpan ke repositori.");
-        } catch (Exception e) {
-            view.tampilkanPesan("Gagal menambah data: " + e.getMessage());
+            view.tampilkanPesan("Data putusan baru berhasil disimpan!");
+            tampilkanSemuaPutusan(); // Refresh tabel
         }
     }
 
     private void tampilkanSemuaPutusan() {
-        ArrayList<Putusan> listData = repository.getSemuaData();
-        view.tampilkanDaftarPutusan(listData);
+        view.tampilkanDaftarPutusan(repository.getSemuaData());
     }
 
     private void prosesCariPutusan() {
-        System.out.print("Masukkan Kata Kunci (Nama Terdakwa): ");
-        String keyword = scanner.nextLine();
-        ArrayList<Putusan> hasil = repository.cariByNama(keyword);
-        view.tampilkanDaftarPutusan(hasil);
+        String keyword = view.inputString("Masukkan Nama Terdakwa:");
+        if (keyword != null && !keyword.trim().isEmpty()) {
+            ArrayList<Putusan> hasil = repository.cariByNama(keyword);
+            view.tampilkanDaftarPutusan(hasil);
+            if (hasil.isEmpty()) {
+                view.tampilkanPesan("Data tidak ditemukan.");
+            }
+        } else {
+            tampilkanSemuaPutusan(); // Reset tabel jika pencarian dibatalkan/kosong
+        }
     }
 
     private void prosesHapusPutusan() {
-        System.out.print("Masukkan Nomor Perkara yang akan dihapus: ");
-        String nomor = scanner.nextLine();
-        boolean terhapus = repository.hapus(nomor);
-        if (terhapus) {
-            view.tampilkanPesan("Data putusan dengan nomor " + nomor + " berhasil dihapus.");
-        } else {
-            view.tampilkanPesan("Data putusan tidak ditemukan.");
+        String nomor = view.inputString("Masukkan Nomor Perkara yang akan dihapus:");
+        if (nomor != null && !nomor.trim().isEmpty()) {
+            boolean terhapus = repository.hapus(nomor);
+            if (terhapus) {
+                view.tampilkanPesan("Data berhasil dihapus.");
+                tampilkanSemuaPutusan(); // Refresh tabel
+            } else {
+                view.tampilkanPesan("Data tidak ditemukan.");
+            }
         }
     }
 
     private void tampilkanStatistik() {
-        ArrayList<Putusan> listData = repository.getSemuaData();
-        StatistikPutusan statistik = new StatistikPutusan(listData);
-        view.tampilkanStatistik(statistik);
+        StatistikPutusan stat = new StatistikPutusan(repository.getSemuaData());
+        String info = "STATISTIK RINGKAS\n\n"
+                + "Total Data: " + stat.getTotalPutusan() + "\n"
+                + "Rata-rata Vonis: " + String.format("%.1f", stat.getRataRataVonis()) + " bulan\n"
+                + "Rata-rata Denda: Rp " + String.format("%,.2f", stat.getRataRataDenda());
+        view.tampilkanPesan(info);
     }
 }
