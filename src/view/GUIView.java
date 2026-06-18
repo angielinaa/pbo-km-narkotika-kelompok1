@@ -126,8 +126,7 @@ public class GUIView extends JFrame {
 
         pnlAction.add(btnTambah);
         // Beri jarak sedikit
-        pnlAction.add(Box.createHorizontalStrConstraint(15));
-        pnlAction.add(btnCari);
+        pnlAction.add(Box.createHorizontalStrut(15));        pnlAction.add(btnCari);
         pnlAction.add(btnHapus);
         pnlAction.add(Box.createHorizontalGlue()); // Dorong statistik ke kanan
         pnlAction.add(btnStatistik);
