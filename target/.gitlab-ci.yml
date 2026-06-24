@@ -1,0 +1,29 @@
+# Gunakan image Java 21 karena kodemu pakai fitur Java terbaru
+image: maven:3.9.6-eclipse-temurin-21
+
+# Cache folder Maven supaya build berikutnya lebih cepat
+cache:
+  paths:
+    - .m2/repository
+
+variables:
+  MAVEN_OPTS: "-Dmaven.repo.local=$CI_PROJECT_DIR/.m2/repository"
+
+stages:
+  - build
+  - test
+
+# Tahap pengecekan apakah kodenya bisa dicompile (Build)
+build_job:
+  stage: build
+  script:
+    - mvn clean compile
+
+# Tahap pengecekan apakah program bisa dipaketkan jadi file JAR
+package_job:
+  stage: test
+  script:
+    - mvn package
+  artifacts:
+    paths:
+      - target/*.jar

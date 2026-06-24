@@ -1,11 +1,11 @@
 package controller;
 
-import model.KnowledgeRepository;
-import model.Putusan;
-import model.StatistikPutusan;
-import model.DataDummy;
+import model.*;
 import view.GUIView;
-import java.util.ArrayList;
+import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.text.PDFTextStripper;
+import java.io.*;
+import java.util.Collections;
 
 public class KnowledgeController {
     private KnowledgeRepository repository;
@@ -18,71 +18,52 @@ public class KnowledgeController {
     }
 
     private void initController() {
-        // Load data dummy jika kosong
-        if (repository.getSemuaData().isEmpty()) {
-            DataDummy.loadData(repository);
-        }
+        DataDummy.loadData(repository);
 
-        // Menghubungkan klik tombol dengan fungsi (Event Listeners)
-        view.getBtnTambah().addActionListener(e -> prosesTambahPutusan());
-        view.getBtnCari().addActionListener(e -> prosesCariPutusan());
-        view.getBtnHapus().addActionListener(e -> prosesHapusPutusan());
-        view.getBtnStatistik().addActionListener(e -> tampilkanStatistik());
+        view.getBtnTambah().setOnAction(e -> {
+            Putusan p = view.showInputForm();
+            if (p != null) { repository.simpan(p); refreshTable(); }
+        });
 
-        // Tampilkan semua data saat pertama kali aplikasi dibuka
-        tampilkanSemuaPutusan();
+        view.getBtnSort().setOnAction(e -> {
+            Collections.sort(repository.getSemuaData());
+            refreshTable();
+            view.tampilkanPesan("Data berhasil diurutkan berdasarkan Vonis Tertinggi!");
+        });
+
+        view.getBtnExport().setOnAction(e -> exportKeTxt());
+
+        view.getBtnImportPDF().setOnAction(e -> importPDF());
+
+        view.getBtnStatistik().setOnAction(e -> {
+            StatistikPutusan s = new StatistikPutusan(repository.getSemuaData());
+            view.tampilkanPesan("Total Putusan: " + s.getTotalPutusan() + "\nRata-rata Vonis: " + s.getRataRataVonis() + " bulan");
+        });
+
+        refreshTable();
     }
 
-    public void start() {
-        // Menampilkan jendela GUI ke layar
-        view.setVisible(true);
-    }
+    public void start() { view.setVisible(true); }
+    private void refreshTable() { view.tampilkanDaftarPutusan(repository.getSemuaData()); }
 
-    private void prosesTambahPutusan() {
-        Putusan putusanBaru = view.showInputForm();
-        if (putusanBaru != null) {
-            repository.simpan(putusanBaru);
-            view.tampilkanPesan("Data putusan baru berhasil disimpan!");
-            tampilkanSemuaPutusan(); // Refresh tabel
-        }
-    }
-
-    private void tampilkanSemuaPutusan() {
-        view.tampilkanDaftarPutusan(repository.getSemuaData());
-    }
-
-    private void prosesCariPutusan() {
-        String keyword = view.inputString("Masukkan Nama Terdakwa:");
-        if (keyword != null && !keyword.trim().isEmpty()) {
-            ArrayList<Putusan> hasil = repository.cariByNama(keyword);
-            view.tampilkanDaftarPutusan(hasil);
-            if (hasil.isEmpty()) {
-                view.tampilkanPesan("Data tidak ditemukan.");
+    private void exportKeTxt() {
+        try (PrintWriter pw = new PrintWriter(new File("Laporan_KMS.txt"))) {
+            pw.println("LAPORAN KMS NARKOTIKA");
+            for (Putusan p : repository.getSemuaData()) {
+                pw.println(p.getNomorPerkara() + " | " + p.getNamaTerdakwa() + " | " + p.getVonisHukuman() + " Bln");
             }
-        } else {
-            tampilkanSemuaPutusan(); // Reset tabel jika pencarian dibatalkan/kosong
-        }
+            view.tampilkanPesan("Berhasil ekspor ke Laporan_KMS.txt");
+        } catch (Exception e) { view.tampilkanPesan("Gagal ekspor!"); }
     }
 
-    private void prosesHapusPutusan() {
-        String nomor = view.inputString("Masukkan Nomor Perkara yang akan dihapus:");
-        if (nomor != null && !nomor.trim().isEmpty()) {
-            boolean terhapus = repository.hapus(nomor);
-            if (terhapus) {
-                view.tampilkanPesan("Data berhasil dihapus.");
-                tampilkanSemuaPutusan(); // Refresh tabel
-            } else {
-                view.tampilkanPesan("Data tidak ditemukan.");
-            }
+    private void importPDF() {
+        File f = view.pilihFile();
+        if (f != null) {
+            try (PDDocument doc = PDDocument.load(f)) {
+                String teks = new PDFTextStripper().getText(doc);
+                // Bonus PDF Parsing: Membaca teks mentah
+                view.tampilkanPesan("PDF Berhasil dibaca! (Awal teks: " + teks.substring(0, 30) + ")");
+            } catch (Exception e) { view.tampilkanPesan("Error membaca PDF"); }
         }
-    }
-
-    private void tampilkanStatistik() {
-        StatistikPutusan stat = new StatistikPutusan(repository.getSemuaData());
-        String info = "STATISTIK RINGKAS\n\n"
-                + "Total Data: " + stat.getTotalPutusan() + "\n"
-                + "Rata-rata Vonis: " + String.format("%.1f", stat.getRataRataVonis()) + " bulan\n"
-                + "Rata-rata Denda: Rp " + String.format("%,.2f", stat.getRataRataDenda());
-        view.tampilkanPesan(info);
     }
 }
