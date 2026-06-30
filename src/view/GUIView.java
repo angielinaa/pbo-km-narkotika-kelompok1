@@ -112,9 +112,103 @@ public class GUIView {
 
     // Tambah Form Dialog (Sederhana)
     public Putusan showInputForm() {
-        TextInputDialog d = new TextInputDialog();
-        d.initOwner(stage);
-        d.setHeaderText("Masukkan Nomor Perkara:");
-        return d.showAndWait().map(n -> new Putusan(n, "PN Selatan", "2025-01-01", "Terdakwa X", 20, "Sabu", 1.0, "Pasal 112", "Pemakai", 12, 1000000, "Hakim")).orElse(null);
+
+        TextInputDialog dialog;
+
+        dialog = new TextInputDialog();
+        dialog.initOwner(stage);
+        dialog.setHeaderText("Masukkan Nomor Perkara:");
+        String nomor = dialog.showAndWait().orElse("");
+        if (nomor.isBlank()) return null;
+
+        dialog = new TextInputDialog();
+        dialog.initOwner(stage);
+        dialog.setHeaderText("Masukkan Nama Pengadilan:");
+        String pengadilan = dialog.showAndWait().orElse("");
+        if (pengadilan.isBlank()) return null;
+
+        dialog = new TextInputDialog();
+        dialog.initOwner(stage);
+        dialog.setHeaderText("Masukkan Tanggal Putusan (yyyy-mm-dd):");
+        String tanggal = dialog.showAndWait().orElse("");
+        if (tanggal.isBlank()) return null;
+
+        dialog = new TextInputDialog();
+        dialog.initOwner(stage);
+        dialog.setHeaderText("Masukkan Nama Terdakwa:");
+        String terdakwa = dialog.showAndWait().orElse("");
+        if (terdakwa.isBlank()) return null;
+
+        dialog = new TextInputDialog();
+        dialog.setHeaderText("Masukkan Usia Terdakwa:");
+        int usia;
+        try {
+            usia = Integer.parseInt(dialog.showAndWait().orElse("0"));
+        } catch (Exception e) {
+            tampilkanPesan("Usia harus berupa angka.");
+            return null;
+        }
+
+        dialog = new TextInputDialog();
+        dialog.setHeaderText("Masukkan Jenis Narkotika:");
+        String jenis = dialog.showAndWait().orElse("");
+        if (jenis.isBlank()) return null;
+
+        dialog = new TextInputDialog();
+        dialog.setHeaderText("Masukkan Berat Barang Bukti (gram):");
+        double berat;
+        try {
+            berat = Double.parseDouble(dialog.showAndWait().orElse("0"));
+        } catch (Exception e) {
+            tampilkanPesan("Berat harus berupa angka.");
+            return null;
+        }
+
+        dialog = new TextInputDialog();
+        dialog.setHeaderText("Masukkan Pasal:");
+        String pasal = dialog.showAndWait().orElse("");
+
+        dialog = new TextInputDialog();
+        dialog.setHeaderText("Masukkan Peran (Pemakai/Pengedar/Kurir):");
+        String peran = dialog.showAndWait().orElse("");
+
+        dialog = new TextInputDialog();
+        dialog.setHeaderText("Masukkan Lama Vonis (bulan):");
+        int vonis;
+        try {
+            vonis = Integer.parseInt(dialog.showAndWait().orElse("0"));
+        } catch (Exception e) {
+            tampilkanPesan("Vonis harus berupa angka.");
+            return null;
+        }
+
+        dialog = new TextInputDialog();
+        dialog.setHeaderText("Masukkan Denda:");
+        double denda;
+        try {
+            denda = Double.parseDouble(dialog.showAndWait().orElse("0"));
+        } catch (Exception e) {
+            tampilkanPesan("Denda harus berupa angka.");
+            return null;
+        }
+
+        dialog = new TextInputDialog();
+        dialog.setHeaderText("Masukkan Nama Hakim:");
+        String hakim = dialog.showAndWait().orElse("");
+
+        return new Putusan(
+                nomor,
+                pengadilan,
+                tanggal,
+                terdakwa,
+                usia,
+                jenis,
+                berat,
+                pasal,
+                peran,
+                vonis,
+                denda,
+                hakim
+        );
     }
 }

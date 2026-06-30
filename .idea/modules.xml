@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/tugas-besar-pbo-project.iml" filepath="$PROJECT_DIR$/.idea/tugas-besar-pbo-project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tugas-besar-pbo-project.iml" filepath="$PROJECT_DIR$/tugas-besar-pbo-project.iml" />
     </modules>
   </component>
 </project>

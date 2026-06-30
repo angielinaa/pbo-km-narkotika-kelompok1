@@ -1,0 +1,471 @@
+======================================
+ KMS PUTUSAN PENGADILAN NARKOTIKA
+======================================
+
+Jumlah Putusan      : 50
+Rata-rata Vonis     : 5.5 bulan
+Rata-rata Denda     : Rp 1.375E7
+Jenis Terbanyak     : Sabu
+
+===== DISTRIBUSI JENIS NARKOTIKA =====
+Sabu : 10
+Ganja : 10
+Tembakau Sintetis : 10
+Heroin : 10
+Ekstasi : 10
+
+========== DATA PUTUSAN ==========
+----------------------------------
+Nomor Perkara : PN-9/2025
+Pengadilan    : Pengadilan Negeri Jakarta
+Tanggal       : 2025-05-10
+Terdakwa      : Terdakwa 9
+Jenis         : Tembakau Sintetis
+Vonis         : 10 bulan
+Denda         : Rp 5500000.0
+Hakim         : Hakim Rudi
+----------------------------------
+Nomor Perkara : PN-19/2025
+Pengadilan    : Pengadilan Negeri Jakarta
+Tanggal       : 2025-05-20
+Terdakwa      : Terdakwa 19
+Jenis         : Tembakau Sintetis
+Vonis         : 10 bulan
+Denda         : Rp 1.05E7
+Hakim         : Hakim Rudi
+----------------------------------
+Nomor Perkara : PN-29/2025
+Pengadilan    : Pengadilan Negeri Jakarta
+Tanggal       : 2025-05-2
+Terdakwa      : Terdakwa 29
+Jenis         : Tembakau Sintetis
+Vonis         : 10 bulan
+Denda         : Rp 1.55E7
+Hakim         : Hakim Rudi
+----------------------------------
+Nomor Perkara : PN-39/2025
+Pengadilan    : Pengadilan Negeri Jakarta
+Tanggal       : 2025-05-12
+Terdakwa      : Terdakwa 39
+Jenis         : Tembakau Sintetis
+Vonis         : 10 bulan
+Denda         : Rp 2.05E7
+Hakim         : Hakim Rudi
+----------------------------------
+Nomor Perkara : PN-49/2025
+Pengadilan    : Pengadilan Negeri Jakarta
+Tanggal       : 2025-05-22
+Terdakwa      : Terdakwa 49
+Jenis         : Tembakau Sintetis
+Vonis         : 10 bulan
+Denda         : Rp 2.55E7
+Hakim         : Hakim Rudi
+----------------------------------
+Nomor Perkara : PN-8/2025
+Pengadilan    : Pengadilan Negeri Jakarta
+Tanggal       : 2025-05-9
+Terdakwa      : Terdakwa 8
+Jenis         : Heroin
+Vonis         : 9 bulan
+Denda         : Rp 5000000.0
+Hakim         : Hakim Dewi
+----------------------------------
+Nomor Perkara : PN-18/2025
+Pengadilan    : Pengadilan Negeri Jakarta
+Tanggal       : 2025-05-19
+Terdakwa      : Terdakwa 18
+Jenis         : Heroin
+Vonis         : 9 bulan
+Denda         : Rp 1.0E7
+Hakim         : Hakim Dewi
+----------------------------------
+Nomor Perkara : PN-28/2025
+Pengadilan    : Pengadilan Negeri Jakarta
+Tanggal       : 2025-05-1
+Terdakwa      : Terdakwa 28
+Jenis         : Heroin
+Vonis         : 9 bulan
+Denda         : Rp 1.5E7
+Hakim         : Hakim Dewi
+----------------------------------
+Nomor Perkara : PN-38/2025
+Pengadilan    : Pengadilan Negeri Jakarta
+Tanggal       : 2025-05-11
+Terdakwa      : Terdakwa 38
+Jenis         : Heroin
+Vonis         : 9 bulan
+Denda         : Rp 2.0E7
+Hakim         : Hakim Dewi
+----------------------------------
+Nomor Perkara : PN-48/2025
+Pengadilan    : Pengadilan Negeri Jakarta
+Tanggal       : 2025-05-21
+Terdakwa      : Terdakwa 48
+Jenis         : Heroin
+Vonis         : 9 bulan
+Denda         : Rp 2.5E7
+Hakim         : Hakim Dewi
+----------------------------------
+Nomor Perkara : PN-7/2025
+Pengadilan    : Pengadilan Negeri Jakarta
+Tanggal       : 2025-05-8
+Terdakwa      : Terdakwa 7
+Jenis         : Ekstasi
+Vonis         : 8 bulan
+Denda         : Rp 4500000.0
+Hakim         : Hakim Sari
+----------------------------------
+Nomor Perkara : PN-17/2025
+Pengadilan    : Pengadilan Negeri Jakarta
+Tanggal       : 2025-05-18
+Terdakwa      : Terdakwa 17
+Jenis         : Ekstasi
+Vonis         : 8 bulan
+Denda         : Rp 9500000.0
+Hakim         : Hakim Sari
+----------------------------------
+Nomor Perkara : PN-27/2025
+Pengadilan    : Pengadilan Negeri Jakarta
+Tanggal       : 2025-05-28
+Terdakwa      : Terdakwa 27
+Jenis         : Ekstasi
+Vonis         : 8 bulan
+Denda         : Rp 1.45E7
+Hakim         : Hakim Sari
+----------------------------------
+Nomor Perkara : PN-37/2025
+Pengadilan    : Pengadilan Negeri Jakarta
+Tanggal       : 2025-05-10
+Terdakwa      : Terdakwa 37
+Jenis         : Ekstasi
+Vonis         : 8 bulan
+Denda         : Rp 1.95E7
+Hakim         : Hakim Sari
+----------------------------------
+Nomor Perkara : PN-47/2025
+Pengadilan    : Pengadilan Negeri Jakarta
+Tanggal       : 2025-05-20
+Terdakwa      : Terdakwa 47
+Jenis         : Ekstasi
+Vonis         : 8 bulan
+Denda         : Rp 2.45E7
+Hakim         : Hakim Sari
+----------------------------------
+Nomor Perkara : PN-6/2025
+Pengadilan    : Pengadilan Negeri Jakarta
+Tanggal       : 2025-05-7
+Terdakwa      : Terdakwa 6
+Jenis         : Ganja
+Vonis         : 7 bulan
+Denda         : Rp 4000000.0
+Hakim         : Hakim Budi
+----------------------------------
+Nomor Perkara : PN-16/2025
+Pengadilan    : Pengadilan Negeri Jakarta
+Tanggal       : 2025-05-17
+Terdakwa      : Terdakwa 16
+Jenis         : Ganja
+Vonis         : 7 bulan
+Denda         : Rp 9000000.0
+Hakim         : Hakim Budi
+----------------------------------
+Nomor Perkara : PN-26/2025
+Pengadilan    : Pengadilan Negeri Jakarta
+Tanggal       : 2025-05-27
+Terdakwa      : Terdakwa 26
+Jenis         : Ganja
+Vonis         : 7 bulan
+Denda         : Rp 1.4E7
+Hakim         : Hakim Budi
+----------------------------------
+Nomor Perkara : PN-36/2025
+Pengadilan    : Pengadilan Negeri Jakarta
+Tanggal       : 2025-05-9
+Terdakwa      : Terdakwa 36
+Jenis         : Ganja
+Vonis         : 7 bulan
+Denda         : Rp 1.9E7
+Hakim         : Hakim Budi
+----------------------------------
+Nomor Perkara : PN-46/2025
+Pengadilan    : Pengadilan Negeri Jakarta
+Tanggal       : 2025-05-19
+Terdakwa      : Terdakwa 46
+Jenis         : Ganja
+Vonis         : 7 bulan
+Denda         : Rp 2.4E7
+Hakim         : Hakim Budi
+----------------------------------
+Nomor Perkara : PN-5/2025
+Pengadilan    : Pengadilan Negeri Jakarta
+Tanggal       : 2025-05-6
+Terdakwa      : Terdakwa 5
+Jenis         : Sabu
+Vonis         : 6 bulan
+Denda         : Rp 3500000.0
+Hakim         : Hakim Andi
+----------------------------------
+Nomor Perkara : PN-15/2025
+Pengadilan    : Pengadilan Negeri Jakarta
+Tanggal       : 2025-05-16
+Terdakwa      : Terdakwa 15
+Jenis         : Sabu
+Vonis         : 6 bulan
+Denda         : Rp 8500000.0
+Hakim         : Hakim Andi
+----------------------------------
+Nomor Perkara : PN-25/2025
+Pengadilan    : Pengadilan Negeri Jakarta
+Tanggal       : 2025-05-26
+Terdakwa      : Terdakwa 25
+Jenis         : Sabu
+Vonis         : 6 bulan
+Denda         : Rp 1.35E7
+Hakim         : Hakim Andi
+----------------------------------
+Nomor Perkara : PN-35/2025
+Pengadilan    : Pengadilan Negeri Jakarta
+Tanggal       : 2025-05-8
+Terdakwa      : Terdakwa 35
+Jenis         : Sabu
+Vonis         : 6 bulan
+Denda         : Rp 1.85E7
+Hakim         : Hakim Andi
+----------------------------------
+Nomor Perkara : PN-45/2025
+Pengadilan    : Pengadilan Negeri Jakarta
+Tanggal       : 2025-05-18
+Terdakwa      : Terdakwa 45
+Jenis         : Sabu
+Vonis         : 6 bulan
+Denda         : Rp 2.35E7
+Hakim         : Hakim Andi
+----------------------------------
+Nomor Perkara : PN-4/2025
+Pengadilan    : Pengadilan Negeri Jakarta
+Tanggal       : 2025-05-5
+Terdakwa      : Terdakwa 4
+Jenis         : Tembakau Sintetis
+Vonis         : 5 bulan
+Denda         : Rp 3000000.0
+Hakim         : Hakim Rudi
+----------------------------------
+Nomor Perkara : PN-14/2025
+Pengadilan    : Pengadilan Negeri Jakarta
+Tanggal       : 2025-05-15
+Terdakwa      : Terdakwa 14
+Jenis         : Tembakau Sintetis
+Vonis         : 5 bulan
+Denda         : Rp 8000000.0
+Hakim         : Hakim Rudi
+----------------------------------
+Nomor Perkara : PN-24/2025
+Pengadilan    : Pengadilan Negeri Jakarta
+Tanggal       : 2025-05-25
+Terdakwa      : Terdakwa 24
+Jenis         : Tembakau Sintetis
+Vonis         : 5 bulan
+Denda         : Rp 1.3E7
+Hakim         : Hakim Rudi
+----------------------------------
+Nomor Perkara : PN-34/2025
+Pengadilan    : Pengadilan Negeri Jakarta
+Tanggal       : 2025-05-7
+Terdakwa      : Terdakwa 34
+Jenis         : Tembakau Sintetis
+Vonis         : 5 bulan
+Denda         : Rp 1.8E7
+Hakim         : Hakim Rudi
+----------------------------------
+Nomor Perkara : PN-44/2025
+Pengadilan    : Pengadilan Negeri Jakarta
+Tanggal       : 2025-05-17
+Terdakwa      : Terdakwa 44
+Jenis         : Tembakau Sintetis
+Vonis         : 5 bulan
+Denda         : Rp 2.3E7
+Hakim         : Hakim Rudi
+----------------------------------
+Nomor Perkara : PN-3/2025
+Pengadilan    : Pengadilan Negeri Jakarta
+Tanggal       : 2025-05-4
+Terdakwa      : Terdakwa 3
+Jenis         : Heroin
+Vonis         : 4 bulan
+Denda         : Rp 2500000.0
+Hakim         : Hakim Dewi
+----------------------------------
+Nomor Perkara : PN-13/2025
+Pengadilan    : Pengadilan Negeri Jakarta
+Tanggal       : 2025-05-14
+Terdakwa      : Terdakwa 13
+Jenis         : Heroin
+Vonis         : 4 bulan
+Denda         : Rp 7500000.0
+Hakim         : Hakim Dewi
+----------------------------------
+Nomor Perkara : PN-23/2025
+Pengadilan    : Pengadilan Negeri Jakarta
+Tanggal       : 2025-05-24
+Terdakwa      : Terdakwa 23
+Jenis         : Heroin
+Vonis         : 4 bulan
+Denda         : Rp 1.25E7
+Hakim         : Hakim Dewi
+----------------------------------
+Nomor Perkara : PN-33/2025
+Pengadilan    : Pengadilan Negeri Jakarta
+Tanggal       : 2025-05-6
+Terdakwa      : Terdakwa 33
+Jenis         : Heroin
+Vonis         : 4 bulan
+Denda         : Rp 1.75E7
+Hakim         : Hakim Dewi
+----------------------------------
+Nomor Perkara : PN-43/2025
+Pengadilan    : Pengadilan Negeri Jakarta
+Tanggal       : 2025-05-16
+Terdakwa      : Terdakwa 43
+Jenis         : Heroin
+Vonis         : 4 bulan
+Denda         : Rp 2.25E7
+Hakim         : Hakim Dewi
+----------------------------------
+Nomor Perkara : PN-2/2025
+Pengadilan    : Pengadilan Negeri Jakarta
+Tanggal       : 2025-05-3
+Terdakwa      : Terdakwa 2
+Jenis         : Ekstasi
+Vonis         : 3 bulan
+Denda         : Rp 2000000.0
+Hakim         : Hakim Sari
+----------------------------------
+Nomor Perkara : PN-12/2025
+Pengadilan    : Pengadilan Negeri Jakarta
+Tanggal       : 2025-05-13
+Terdakwa      : Terdakwa 12
+Jenis         : Ekstasi
+Vonis         : 3 bulan
+Denda         : Rp 7000000.0
+Hakim         : Hakim Sari
+----------------------------------
+Nomor Perkara : PN-22/2025
+Pengadilan    : Pengadilan Negeri Jakarta
+Tanggal       : 2025-05-23
+Terdakwa      : Terdakwa 22
+Jenis         : Ekstasi
+Vonis         : 3 bulan
+Denda         : Rp 1.2E7
+Hakim         : Hakim Sari
+----------------------------------
+Nomor Perkara : PN-32/2025
+Pengadilan    : Pengadilan Negeri Jakarta
+Tanggal       : 2025-05-5
+Terdakwa      : Terdakwa 32
+Jenis         : Ekstasi
+Vonis         : 3 bulan
+Denda         : Rp 1.7E7
+Hakim         : Hakim Sari
+----------------------------------
+Nomor Perkara : PN-42/2025
+Pengadilan    : Pengadilan Negeri Jakarta
+Tanggal       : 2025-05-15
+Terdakwa      : Terdakwa 42
+Jenis         : Ekstasi
+Vonis         : 3 bulan
+Denda         : Rp 2.2E7
+Hakim         : Hakim Sari
+----------------------------------
+Nomor Perkara : PN-1/2025
+Pengadilan    : Pengadilan Negeri Jakarta
+Tanggal       : 2025-05-2
+Terdakwa      : Terdakwa 1
+Jenis         : Ganja
+Vonis         : 2 bulan
+Denda         : Rp 1500000.0
+Hakim         : Hakim Budi
+----------------------------------
+Nomor Perkara : PN-11/2025
+Pengadilan    : Pengadilan Negeri Jakarta
+Tanggal       : 2025-05-12
+Terdakwa      : Terdakwa 11
+Jenis         : Ganja
+Vonis         : 2 bulan
+Denda         : Rp 6500000.0
+Hakim         : Hakim Budi
+----------------------------------
+Nomor Perkara : PN-21/2025
+Pengadilan    : Pengadilan Negeri Jakarta
+Tanggal       : 2025-05-22
+Terdakwa      : Terdakwa 21
+Jenis         : Ganja
+Vonis         : 2 bulan
+Denda         : Rp 1.15E7
+Hakim         : Hakim Budi
+----------------------------------
+Nomor Perkara : PN-31/2025
+Pengadilan    : Pengadilan Negeri Jakarta
+Tanggal       : 2025-05-4
+Terdakwa      : Terdakwa 31
+Jenis         : Ganja
+Vonis         : 2 bulan
+Denda         : Rp 1.65E7
+Hakim         : Hakim Budi
+----------------------------------
+Nomor Perkara : PN-41/2025
+Pengadilan    : Pengadilan Negeri Jakarta
+Tanggal       : 2025-05-14
+Terdakwa      : Terdakwa 41
+Jenis         : Ganja
+Vonis         : 2 bulan
+Denda         : Rp 2.15E7
+Hakim         : Hakim Budi
+----------------------------------
+Nomor Perkara : PN-10/2025
+Pengadilan    : Pengadilan Negeri Jakarta
+Tanggal       : 2025-05-11
+Terdakwa      : Terdakwa 10
+Jenis         : Sabu
+Vonis         : 1 bulan
+Denda         : Rp 6000000.0
+Hakim         : Hakim Andi
+----------------------------------
+Nomor Perkara : PN-20/2025
+Pengadilan    : Pengadilan Negeri Jakarta
+Tanggal       : 2025-05-21
+Terdakwa      : Terdakwa 20
+Jenis         : Sabu
+Vonis         : 1 bulan
+Denda         : Rp 1.1E7
+Hakim         : Hakim Andi
+----------------------------------
+Nomor Perkara : PN-30/2025
+Pengadilan    : Pengadilan Negeri Jakarta
+Tanggal       : 2025-05-3
+Terdakwa      : Terdakwa 30
+Jenis         : Sabu
+Vonis         : 1 bulan
+Denda         : Rp 1.6E7
+Hakim         : Hakim Andi
+----------------------------------
+Nomor Perkara : PN-40/2025
+Pengadilan    : Pengadilan Negeri Jakarta
+Tanggal       : 2025-05-13
+Terdakwa      : Terdakwa 40
+Jenis         : Sabu
+Vonis         : 1 bulan
+Denda         : Rp 2.1E7
+Hakim         : Hakim Andi
+----------------------------------
+Nomor Perkara : PN-50/2025
+Pengadilan    : Pengadilan Negeri Jakarta
+Tanggal       : 2025-05-23
+Terdakwa      : Terdakwa 50
+Jenis         : Sabu
+Vonis         : 1 bulan
+Denda         : Rp 2.6E7
+Hakim         : Hakim Andi
+
+======================================
+ Laporan selesai dibuat.
+======================================

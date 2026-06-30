@@ -31,6 +31,30 @@ public class KnowledgeController {
             }
         });
 
+        view.getBtnHapus().setOnAction(e -> {
+
+            String nomor = view.inputString(
+                    "Masukkan Nomor Perkara yang akan dihapus");
+
+            if (nomor == null || nomor.isEmpty())
+                return;
+
+            boolean berhasil = repository.hapus(nomor);
+
+            if (berhasil) {
+
+                refreshTable();
+
+                view.tampilkanPesan("Data berhasil dihapus.");
+
+            } else {
+
+                view.tampilkanPesan("Data tidak ditemukan.");
+
+            }
+
+        });
+
         view.getBtnSort().setOnAction(e -> {
             Collections.sort(repository.getSemuaData());
             refreshTable();
@@ -38,16 +62,97 @@ public class KnowledgeController {
         });
 
         view.getBtnExport().setOnAction(e -> {
-            try (PrintWriter pw = new PrintWriter(new File("Statistik_KMS.txt"))) {
-                StatistikPutusan s = new StatistikPutusan(repository.getSemuaData());
-                pw.println("Total: " + s.getTotalPutusan() + "\nRata Vonis: " + s.getRataRataVonis());
-                view.tampilkanPesan("Ekspor berhasil ke Statistik_KMS.txt");
-            } catch (Exception ex) { view.tampilkanPesan("Gagal Ekspor!"); }
+
+            try (PrintWriter pw = new PrintWriter("Statistik_KMS.txt")) {
+
+                StatistikPutusan statistik =
+                        new StatistikPutusan(repository.getSemuaData());
+
+                pw.println("======================================");
+                pw.println(" KMS PUTUSAN PENGADILAN NARKOTIKA");
+                pw.println("======================================");
+                pw.println();
+
+                pw.println("Jumlah Putusan      : "
+                        + statistik.getTotalPutusan());
+
+                pw.println("Rata-rata Vonis     : "
+                        + statistik.getRataRataVonis() + " bulan");
+
+                pw.println("Rata-rata Denda     : Rp "
+                        + statistik.getRataRataDenda());
+
+                pw.println("Jenis Terbanyak     : "
+                        + statistik.getJenisNarkotikaTerbanyak());
+
+                pw.println();
+                pw.println("===== DISTRIBUSI JENIS NARKOTIKA =====");
+
+                for (var entry : statistik.getDistribusiJenis().entrySet()) {
+
+                    pw.println(entry.getKey() + " : " + entry.getValue());
+
+                }
+
+                pw.println();
+                pw.println("========== DATA PUTUSAN ==========");
+
+                for (Putusan p : repository.getSemuaData()) {
+
+                    pw.println("----------------------------------");
+                    pw.println("Nomor Perkara : " + p.getNomorPerkara());
+                    pw.println("Pengadilan    : " + p.getPengadilan());
+                    pw.println("Tanggal       : " + p.getTanggalPutusan());
+                    pw.println("Terdakwa      : " + p.getNamaTerdakwa());
+                    pw.println("Jenis         : " + p.getJenisNarkotika());
+                    pw.println("Vonis         : " + p.getVonisHukuman() + " bulan");
+                    pw.println("Denda         : Rp " + p.getVonisDenda());
+                    pw.println("Hakim         : " + p.getNamaHakim());
+                }
+
+                pw.println();
+                pw.println("======================================");
+                pw.println(" Laporan selesai dibuat.");
+                pw.println("======================================");
+
+                view.tampilkanPesan("Export TXT berhasil!");
+
+            } catch (Exception ex) {
+
+                view.tampilkanPesan("Gagal Export!\n" + ex.getMessage());
+
+            }
+
         });
 
         view.getBtnTambah().setOnAction(e -> {
             Putusan p = view.showInputForm();
             if(p != null) { repository.simpan(p); refreshTable(); }
+        });
+
+        view.getBtnStatistik().setOnAction(e -> {
+
+            StatistikPutusan statistik =
+                    new StatistikPutusan(repository.getSemuaData());
+
+            String hasil =
+
+                    "===== STATISTIK =====\n\n"
+
+                            + "Jumlah Putusan : "
+                            + statistik.getTotalPutusan()
+
+                            + "\n\nRata-rata Vonis : "
+                            + statistik.getRataRataVonis()
+
+                            + "\n\nRata-rata Denda : Rp "
+                            + statistik.getRataRataDenda()
+
+                            + "\n\nJenis Terbanyak : "
+                            + statistik.getJenisNarkotikaTerbanyak();
+
+            view.tampilkanPesan(hasil);
+
         });
 
         refreshTable();

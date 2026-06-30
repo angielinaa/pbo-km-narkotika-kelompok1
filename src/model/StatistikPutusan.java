@@ -14,6 +14,9 @@ public class StatistikPutusan {
     private double rataRataDenda;
     private String jenisNarkotikaTerbanyak;
 
+    // Menyimpan distribusi setiap jenis narkotika
+    private HashMap<String, Integer> distribusiJenis = new HashMap<>();
+
     public StatistikPutusan(ArrayList<Putusan> data) {
 
         totalPutusan = data.size();
@@ -51,21 +54,21 @@ public class StatistikPutusan {
 
     private void hitungJenisTerbanyak(ArrayList<Putusan> data) {
 
-        HashMap<String, Integer> map = new HashMap<>();
+        distribusiJenis.clear();
 
         for (Putusan p : data) {
 
             String jenis = p.getJenisNarkotika();
 
-            map.put(
+            distribusiJenis.put(
                     jenis,
-                    map.getOrDefault(jenis, 0) + 1
+                    distribusiJenis.getOrDefault(jenis, 0) + 1
             );
         }
 
         int max = 0;
 
-        for (Map.Entry<String, Integer> entry : map.entrySet()) {
+        for (Map.Entry<String, Integer> entry : distribusiJenis.entrySet()) {
 
             if (entry.getValue() > max) {
 
@@ -75,23 +78,9 @@ public class StatistikPutusan {
         }
     }
 
-    public HashMap<String, Integer> getDistribusiJenis(
-            ArrayList<Putusan> data) {
-
-        HashMap<String, Integer> distribusi =
-                new HashMap<>();
-
-        for (Putusan p : data) {
-
-            String jenis = p.getJenisNarkotika();
-
-            distribusi.put(
-                    jenis,
-                    distribusi.getOrDefault(jenis, 0) + 1
-            );
-        }
-
-        return distribusi;
+    // Getter distribusi jenis narkotika
+    public HashMap<String, Integer> getDistribusiJenis() {
+        return distribusiJenis;
     }
 
     public int getTotalPutusan() {
