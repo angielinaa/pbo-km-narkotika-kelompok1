@@ -6,6 +6,8 @@ import javafx.application.Platform;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Collections;
+import util.PDFReader;
+import java.io.File;
 
 public class KnowledgeController {
     private KnowledgeRepository repository;
@@ -120,6 +122,41 @@ public class KnowledgeController {
             } catch (Exception ex) {
 
                 view.tampilkanPesan("Gagal Export!\n" + ex.getMessage());
+
+            }
+
+        });
+
+        view.getBtnImportPDF().setOnAction(e -> {
+
+            File file = view.pilihFile();
+
+            if (file == null) {
+                return;
+            }
+
+            try {
+
+                Putusan putusan = PDFReader.importPutusan(file);
+
+                // ===== VALIDASI DUPLIKAT =====
+                if (repository.cariByNomor(putusan.getNomorPerkara()) != null) {
+
+                    view.tampilkanPesan("Nomor perkara sudah ada.");
+
+                    return;
+
+                }
+
+                repository.simpan(putusan);
+
+                refreshTable();
+
+                view.tampilkanPesan("Import PDF berhasil!");
+
+            } catch (Exception ex) {
+
+                view.tampilkanPesan("Import gagal!\n" + ex.getMessage());
 
             }
 
